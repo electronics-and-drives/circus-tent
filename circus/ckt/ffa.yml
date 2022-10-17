@@ -1,0 +1,79 @@
+devices:
+  - id: MNDP11
+    type: NMOS
+  - id: MNDP12
+    type: NMOS
+  - id: MNDP21
+    type: NMOS
+  - id: MNDP22
+    type: NMOS
+  - id: MNDP31
+    type: NMOS
+  - id: MNDP32
+    type: NMOS
+  - id: MNCM11
+    type: NMOS
+  - id: MNCM12
+    type: NMOS
+  - id: MNCM13
+    type: NMOS
+  - id: MNCM14
+    type: NMOS
+  - id: MNCM15
+    type: NMOS
+  - id: MPCM21
+    type: PMOS
+  - id: MPCM22
+    type: PMOS
+  - id: MPCM23
+    type: PMOS
+  - id: MPCS11
+    type: PMOS
+  - id: MPCS12
+    type: PMOS
+  - id: MPCS21
+    type: PMOS
+  - id: MPCS22
+    type: PMOS
+parameters: 
+  testbench:
+    cl: 5.0e-12
+    i0: 3.0e-6
+    rl: 1.0e8
+    vs: 0.5
+    vdd: 1.8
+    scl: 1.0
+  geometrical:
+    Ldp1: 5.15e-6
+    Ldp2: 5.15e-6
+    Ldp3: 5.15e-6
+    Lcm1: 1.95e-6
+    Lcm2: 3.35e-6
+    Lcs1: 3.35e-6
+    Lcs2: 3.35e-6
+    Wdp1: 3.0e-6
+    Wdp2: 3.0e-6
+    Wdp3: 3.0e-6
+    Wcm1: 2.55e-6
+    Wcm2: 10.65e-6
+    Wcs1: 10.65e-6
+    Wcs2: 10.65e-6
+    Mdp11: 2.0
+    Mdp12: 2.0
+    Mdp21: 2.0
+    Mdp22: 2.0
+    Mdp31: 2.0
+    Mdp32: 2.0
+    Mcm11: 2.0
+    Mcm12: 2.0
+    Mcm13: 2.0
+    Mcm14: 2.0
+    Mcm15: 2.0
+    Mcm21: 2.0
+    Mcm22: 1.0
+    Mcm23: 1.0
+    Mcs11: 1.0
+    Mcs12: 1.0
+    Mcs21: 1.0
+    Mcs22: 1.0
+  area: "((Mdp11+Mdp12)*Wdp1*Ldp1)+((Mdp21+Mdp22)*Wdp2*Ldp2)+((Mcm11+Mcm12+Mcm13+Mcm14+Mcm15)*Wcm1*Lcm1)+((Mcm21+Mcm22+Mcm23)*Wcm2*Lcm2)+((Mcs11+Mcm12)*Wcs1*Lcs1)+((Mcs21+Mcs22)*Wcs2*Lcs2)"

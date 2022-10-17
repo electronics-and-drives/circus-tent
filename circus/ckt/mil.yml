@@ -1,0 +1,55 @@
+devices:
+  - id: MNDP11
+    type: NMOS
+  - id: MNDP12
+    type: NMOS
+  - id: MNCM11
+    type: NMOS
+  - id: MNCM12
+    type: NMOS
+  - id: MNCM13
+    type: NMOS
+  - id: MPCM21
+    type: PMOS
+  - id: MPCM22
+    type: PMOS
+  - id: MPCS11
+    type: PMOS
+  - id: CMCS11
+    type: CAP
+  - id: RPCS11
+    type: RES
+parameters: 
+  testbench:
+    cl: 5.0e-12
+    i0: 3.0e-6
+    rl: 1.0e8
+    vs: 0.5
+    vdd: 1.8
+    scl: 1.0
+    cc: 3.5e-12
+    rc: 5.0e3
+  geometrical:
+    Lcm1: 2.00e-6
+    Lcm2: 1.70e-6
+    Ldp1: 2.50e-6
+    Lcs1: 1.00e-6
+    Lcap: 69.0e-6
+    Lres: 113.0e-6
+    Wcm1: 2.60e-6
+    Wcm2: 6.90e-6
+    Wdp1: 4.00e-6
+    Wcs1: 3.35e-6
+    Wcap: 69.0e-6
+    Wres: 2.0e-6
+    Mcm11: 1.0
+    Mcm12: 1.0
+    Mcm13: 22.0
+    Mcm21: 2.0
+    Mcm22: 2.0
+    Mdp11: 2.0
+    Mdp12: 2.0
+    Mcs11: 22.0
+    Mcap1: 1.0
+    Mres1: 1.0
+  area: "((Mcm13+Mcm12+Mcm13)*Wcm1*Lcm1)+((Mdp11+Mdp12)*Wdp1*Ldp1)+((Mcm21+Mcm22)*Wcm2*Lcm2)+(Mcs11*Wcs1*Lcs1)+(Mres1*Wres*Lres)+(Lcap*Wcap*Mcap1)"
