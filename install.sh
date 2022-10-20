@@ -14,10 +14,9 @@ else
 fi
 
 if { conda env list | grep 'circus'; } >/dev/null 2>&1; then
-    printf "circus environment already exits!\n"
-    exit 2
+    printf "circus environment already exits, switching ...\n"
 else
-    printf "Creating the conda Environment\n"
+    printf "Creating the environment\n"
     conda env create -f ./environment.yml
 fi
 
