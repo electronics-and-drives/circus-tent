@@ -69,15 +69,22 @@ Specify the complete path to gpdk.scs in GPDK 180: /opt/pdk/gpdk180_v3.3/models/
 ### Testing the installation
 
 If the installation was successful, the environments are in the gym registry
-and can be used as follows.
+and can be used as follows. Start by activating the environment and opening a
+python REPL.
+
+```bash
+$ conda activate circus
+(circus) $ python
+```
+
+Then create an environment and take a random step after resetting.
 
 ```python
-import gym
-
-env     = gym.make('circus:sym-gpdk180-geom-v0')
-obs     = env.reset()
-act     = env.action_space.sample()
-o,r,d,i = env.step(act)
+>>> import gym
+>>> env = gym.make('circus:sym-gpdk180-geom-v0')
+>>> _ = env.reset()
+>>> a = env.action_space.sample()
+>>> o,r,d,i = env.step(a)
 ```
 
 **Note:** There might be warnings about clipping the sizing. This happens
