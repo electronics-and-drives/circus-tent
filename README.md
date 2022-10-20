@@ -33,6 +33,10 @@ env = gym.make('circus:fca-gpdk180-geom-v0')
 env = gym.make('circus:fca-gpdk180-geom-v1')
 env = gym.make('circus:fca-gpdk180-elec-v0')
 env = gym.make('circus:fca-gpdk180-elec-v1')
+env = gym.make('circus:ffa-gpdk180-geom-v0')
+env = gym.make('circus:ffa-gpdk180-geom-v1')
+env = gym.make('circus:ffa-gpdk180-elec-v0')
+env = gym.make('circus:ffa-gpdk180-elec-v1')
 env = gym.make('circus:rfa-gpdk180-geom-v0')
 env = gym.make('circus:rfa-gpdk180-geom-v1')
 env = gym.make('circus:rfa-gpdk180-elec-v0')
@@ -75,6 +79,10 @@ obs     = env.reset()
 act     = env.action_space.sample()
 o,r,d,i = env.step(act)
 ```
+
+**Note:** There might be warnings about clipping the sizing. This happens
+whenever the initial state is particularly bad, and the `W`s and/or `L`s
+violate the PDKs min/max constraints.
 
 ### Manual Process
 
